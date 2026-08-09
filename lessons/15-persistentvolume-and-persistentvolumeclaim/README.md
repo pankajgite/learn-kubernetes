@@ -22,11 +22,11 @@ The process works as follows:
 ```mermaid
 graph TD
     subgraph "Storage Provisioning (Admin Task)"
-        PV[PersistentVolume (e.g., 10GB NFS Share)]
+        PV["PersistentVolume (e.g., 10GB NFS Share)"]
     end
 
     subgraph "Storage Consumption (Developer Task)"
-        PVC[PersistentVolumeClaim (requests 5GB)]
+        PVC["PersistentVolumeClaim (requests 5GB)"]
         P[Pod]
     end
 
