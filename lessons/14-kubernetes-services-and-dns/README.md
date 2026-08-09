@@ -24,11 +24,11 @@ graph TD
         D[Deployment: user-service]
     end
 
-    T[Pod: task-service] -- "http://user-service:8081" --> S
+    T["Pod: task-service"] -- "http://user-service:8081" --> S
 
     subgraph "Pods managed by Deployment"
-        P1[Pod 1 (app=user-service)]
-        P2[Pod 2 (app=user-service)]
+        P1["Pod 1 (app=user-service)"]
+        P2["Pod 2 (app=user-service)"]
     end
 
     S -- "Selects Pods with label app=user-service" --> P1
