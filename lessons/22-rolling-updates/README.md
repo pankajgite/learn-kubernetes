@@ -22,21 +22,21 @@ This ensures that there are always healthy Pods available to serve traffic throu
 ```mermaid
 graph TD
     subgraph "Before Update"
-        S[Service] --> P1_v1[Pod v1]
-        S --> P2_v1[Pod v1]
-        S --> P3_v1[Pod v1]
+        S[Service] --> P1_v1["Pod v1"]
+        S --> P2_v1["Pod v1"]
+        S --> P3_v1["Pod v1"]
     end
 
     subgraph "During Update"
-        S_mid[Service] --> P1_v1_mid[Pod v1]
-        S_mid --> P2_v1_mid[Pod v1]
-        S_mid --> P1_v2_mid[Pod v2 (New)]
+        S_mid[Service] --> P1_v1_mid["Pod v1"]
+        S_mid --> P2_v1_mid["Pod v1"]
+        S_mid --> P1_v2_mid["Pod v2 (New)"]
     end
 
     subgraph "After Update"
-        S_after[Service] --> P1_v2[Pod v2]
-        S_after --> P2_v2[Pod v2]
-        S_after --> P3_v2[Pod v2]
+        S_after[Service] --> P1_v2["Pod v2"]
+        S_after --> P2_v2["Pod v2"]
+        S_after --> P3_v2["Pod v2"]
     end
 ```
 
