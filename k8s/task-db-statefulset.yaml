@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: task-db
+  namespace: team-task-hub
+spec:
+  serviceName: task-db
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: task-db
+  
+  template:
+    metadata:
+      labels:
+        app: task-db
+
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16
+
+          ports:
+            - containerPort: 5432
+
+          env:
+            - name: POSTGRES_DB
+              value: task_db
+            
+            - name: POSTGRES_USER
+              value: postgres
+
+            - name: POSTGRES_PASSWORD
+              value: postgres 
+
+          volumeMounts:
+            - name: task-db-storage
+              mountPath: /var/lib/postgresql/data
+          
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+
+            limits:
+              cpu: 500m
+              memory: 512Mi
+      
+      volumes:
+        - name: task-db-storage
+          persistentVolumeClaim:
+            claimName: task-db-pvc
+        
+  
