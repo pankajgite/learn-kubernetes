@@ -125,35 +125,34 @@ This project is structured into a series of lessons that guide you through the d
 
 | Lesson | Topic                                           |
 | :----- | :---------------------------------------------- |
-| 01     | Project & Microservices Architecture            |
-| 02     | User Service                                    |
-| 03     | Task Service                                    |
-| 04     | REST vs Feign / Service-to-Service Communication|
-| 05     | JWT Authentication & Spring Security            |
-| 06     | PostgreSQL & Database Design                    |
-| 07     | Docker Fundamentals                             |
-| 08     | Dockerfiles & .dockerignore                     |
-| 09     | Docker Compose                                  |
-| 10     | Kubernetes Fundamentals                         |
-| 11     | Minikube Setup                                  |
-| 12     | Kubernetes Namespace                            |
-| 13     | Deployments & ReplicaSets                       |
-| 14     | Kubernetes Services & DNS                       |
-| 15     | PersistentVolume & PersistentVolumeClaim        |
-| 16     | StatefulSets for PostgreSQL                     |
-| 17     | Kubernetes Resource Requests & Limits           |
-| 18     | Kubernetes Troubleshooting                      |
-| 19     | ConfigMaps                                      |
-| 20     | Kubernetes Secrets                              |
-| 21     | Kubernetes Service-to-Service Communication     |
-| 22     | Rolling Updates                                 |
-| 23     | Health Checks / Readiness & Liveness Probes     |
-| 24     | Scaling Microservices                           |
-| 25     | Ingress / External Access                       |
-| 26     | Frontend Deployment                             |
-| 27     | Complete Deployment Architecture                |
-| 28     | Final Revision & Interview Notes                |
+| 01     | [Project & Microservices Architecture](./lessons/01-project-and-microservices-architecture/README.md)            |
+| 02     | [User Service](./lessons/02-user-service/README.md)                                    |
+| 03     | [Task Service](./lessons/03-task-service/README.md)                                    |
+| 04     | [REST vs Feign / Service-to-Service Communication](./lessons/04-rest-vs-feign/README.md)|
+| 05     | [JWT Authentication & Spring Security](./lessons/05-jwt-authentication/README.md)            |
+| 06     | [PostgreSQL & Database Design](./lessons/06-postgresql-database-design/README.md)                    |
+| 07     | [Docker Fundamentals](./lessons/07-docker-fundamentals/README.md)                             |
+| 08     | [Dockerfiles & .dockerignore](./lessons/08-dockerfiles-and-dockerignore/README.md)                     |
+| 09     | [Docker Compose](./lessons/09-docker-compose/README.md)                                  |
+| 10     | [Kubernetes Fundamentals](./lessons/10-kubernetes-fundamentals/README.md)                         |
+| 11     | [Minikube Setup](./lessons/11-minikube-setup/README.md)                                  |
+| 12     | [Kubernetes Namespace](./lessons/12-kubernetes-namespace/README.md)                            |
+| 13     | [Deployments & ReplicaSets](./lessons/13-deployments-and-replicasets/README.md)                       |
+| 14     | [Kubernetes Services & DNS](./lessons/14-kubernetes-services-and-dns/README.md)                       |
+| 15     | [PersistentVolume & PersistentVolumeClaim](./lessons/15-persistentvolume-and-persistentvolumeclaim/README.md)        |
+| 16     | [StatefulSets for PostgreSQL](./lessons/16-statefulsets-for-postgresql/README.md)                     |
+| 17     | [Kubernetes Resource Requests & Limits](./lessons/17-kubernetes-resource-requests-and-limits/README.md)           |
+| 18     | [Kubernetes Troubleshooting](./lessons/18-kubernetes-troubleshooting/README.md)                      |
+| 19     | [ConfigMaps](./lessons/19-configmaps/README.md)                                      |
+| 20     | [Kubernetes Secrets](./lessons/20-kubernetes-secrets/README.md)                              |
+| 21     | [Kubernetes Service-to-Service Communication](./lessons/21-kubernetes-service-to-service-communication/README.md)     |
+| 22     | [Rolling Updates](./lessons/22-rolling-updates/README.md)                                 |
+| 23     | [Health Checks / Readiness & Liveness Probes](./lessons/23-health-checks-readiness-liveness-probes/README.md)     |
+| 24     | [Scaling Microservices](./lessons/24-scaling-microservices/README.md)                           |
+| 25     | [Ingress / External Access](./lessons/25-ingress-external-access/README.md)                       |
+| 26     | [Frontend Deployment](./lessons/26-frontend-deployment/README.md)                             |
+| 27     | [Complete Deployment Architecture](./lessons/27-complete-deployment-architecture/README.md)                |
+| 28     | [Final Revision & Interview Notes](./lessons/28-final-revision-and-interview-notes/README.md)                |
 
 ---
 
-*This README was generated with the assistance of an AI tool.*
