@@ -4,6 +4,7 @@ import com.task.taskService.dto.*;
 import com.task.taskService.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,10 @@ import org.springframework.web.bind.annotation.*;
 public class TaskController {
 
     private final TaskService taskService;
+
+    @Value("${SPRING_PROFILES_ACTIVE}")
+    private String profile;
+
 
     @PostMapping
     public ResponseEntity<ApiResponse<TaskResponse>> createTask(@Valid @RequestBody CreateTaskRequest taskRequest) {
@@ -54,5 +59,10 @@ public class TaskController {
     public ResponseEntity<ApiResponse<TaskResponse>> updateTaskStatus(@PathVariable Long id, @Valid @RequestBody UpdateTaskStatusRequest statusRequest) {
         TaskResponse updatedTask = taskService.updateTaskStatus(id, statusRequest);
         return ResponseEntity.ok(ApiResponse.success(updatedTask, "Task status updated successfully"));
+    }
+
+    @GetMapping("/getProfile")
+    public String getProfile(){
+        return profile;
     }
 }

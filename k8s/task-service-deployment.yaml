@@ -3,26 +3,69 @@ kind: Deployment
 metadata:
   name: task-service
   namespace: team-task-hub
+
 spec:
   replicas: 1
+
   selector:
     matchLabels:
       app: task-service
+
   template:
     metadata:
       labels:
         app: task-service
+
     spec:
       containers:
-      - name: task-service
-        image: team-task-hub-task-service:latest
-        imagePullPolicy: IfNotPresent
-        resources:
-          requests:
-            cpu: 100m
-            memory: 256Mi
-          limits:
-            cpu: 500m
-            memory: 1Gi
-        ports:
-        - containerPort: 8080
+        - name: task-service
+          image: team-task-hub-task-service:latest
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8080
+
+          env:
+            - name: USER_SERVICE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: task-service-config
+                  key: USER_SERVICE_URL
+
+            - name: SERVER_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: task-service-config
+                  key: SERVER_PORT
+
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: task-service-config
+                  key: SPRING_PROFILES_ACTIVE
+            
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: task-service-secret
+                  key: DB_USERNAME
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: task-service-secret
+                  key: DB_PASSWORD
+
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: task-service-secret
+                  key: JWT_SECRET
+
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 1Gi
