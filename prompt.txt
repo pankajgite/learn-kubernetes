@@ -1,0 +1,203 @@
+Create a complete, professional documentation system for this project using Markdown README files.
+
+MAIN README:
+Create/update the root README.md as the central documentation and navigation page.
+
+Design it with:
+- Project title and short description
+- Problem statement / purpose of the project
+- Key features
+- Technology stack
+- Overall architecture
+- High-level request/data flow
+- Complete project folder structure
+- List of all microservices and their responsibilities
+- Ports and database information
+- How the services communicate
+- Docker and Kubernetes overview
+- Prerequisites
+- Local setup instructions
+- Docker/Docker Compose setup instructions
+- Kubernetes/Minikube setup instructions
+- How to run and test the application
+- API documentation/reference
+- Troubleshooting section
+- Learning roadmap
+- Lesson-wise documentation/navigation
+- Revision/interview preparation section
+
+Create a clear "📚 Lessons / Documentation" section in the root README with links to separate lesson README files.
+
+LESSON-WISE DOCUMENTATION:
+Create a separate README.md for each major learning stage. Do NOT put everything into one huge README.
+
+Organize the lessons logically, for example:
+
+01 - Project & Microservices Architecture
+02 - User Service
+03 - Task Service
+04 - REST vs Feign / Service-to-Service Communication
+05 - JWT Authentication & Spring Security
+06 - PostgreSQL & Database Design
+07 - Docker Fundamentals
+08 - Dockerfiles & .dockerignore
+09 - Docker Compose
+10 - Kubernetes Fundamentals
+11 - Minikube Setup
+12 - Kubernetes Namespace
+13 - Deployments & ReplicaSets
+14 - Kubernetes Services & DNS
+15 - PersistentVolume & PersistentVolumeClaim
+16 - StatefulSets for PostgreSQL
+17 - Kubernetes Resource Requests & Limits
+18 - Kubernetes Troubleshooting
+19 - ConfigMaps
+20 - Kubernetes Secrets
+21 - Kubernetes Service-to-Service Communication
+22 - Rolling Updates
+23 - Health Checks / Readiness & Liveness Probes
+24 - Scaling Microservices
+25 - Ingress / External Access
+26 - Frontend Deployment
+27 - Complete Deployment Architecture
+28 - Final Revision & Interview Notes
+
+Adjust the lesson structure based on what actually exists in the project. Do not invent features that have not been implemented.
+
+FOR EVERY LESSON README:
+Use a consistent structure such as:
+
+# Lesson Title
+
+## What We Learned
+Explain the concepts covered.
+
+## Why Do We Need This?
+Explain the real-world purpose and why this technology/concept is being used in this project.
+
+## Architecture / Flow
+Explain how the component fits into the overall system.
+
+Use Mermaid diagrams wherever useful. Diagrams should be written using Mermaid syntax compatible with https://mermaid.live/.
+
+Examples of diagrams to include where appropriate:
+- Microservices architecture
+- Request flow
+- Task Service → User Service Feign flow
+- User Service → PostgreSQL flow
+- Task Service → PostgreSQL flow
+- Docker architecture
+- Docker Compose architecture
+- Kubernetes architecture
+- Pod → Service → Pod communication
+- Kubernetes DNS/service discovery
+- Deployment → ReplicaSet → Pod
+- StatefulSet → PVC → PV → PostgreSQL
+- ConfigMap/Secret → Pod → Spring Boot
+- Rolling update flow
+- Complete production-style deployment flow
+
+## Project Implementation
+Explain exactly how the concept was implemented in THIS project.
+
+Include:
+- Relevant files
+- Important classes
+- Important configuration
+- Kubernetes YAML files
+- Important properties/environment variables
+- Commands used
+
+## Configuration
+Explain important configuration values and why they are required.
+
+## Commands
+Include the actual commands used during development/deployment.
+
+## Testing
+Explain how to verify that the feature works, including expected results.
+
+## Troubleshooting
+Document actual problems encountered during development and how they were solved.
+
+Include the important errors we encountered, such as:
+- Maven not recognized
+- Java/Javac compatibility issue
+- JWT expiration property conversion error
+- PostgreSQL database not found
+- Kubernetes insufficient CPU
+- ImagePullBackOff / ErrImagePull
+- Minikube image loading
+- OOMKilled
+- Port-forward connection refused
+- Kubernetes service/DNS debugging
+- ConfigMap configuration
+- Secret configuration
+- StatefulSet/PVC issues
+
+For every troubleshooting item explain:
+1. Error
+2. Why it happened
+3. How we identified it
+4. Fix
+5. Lesson learned
+
+## Revision Notes
+Add concise notes for future revision.
+
+## Interview Questions
+Add relevant interview questions and short answers based on that lesson.
+
+## Important Takeaways
+Summarize the most important concepts.
+
+## Navigation
+Add links to Previous Lesson, Main README, and Next Lesson.
+
+DOCUMENTATION QUALITY:
+- Make the documentation beginner-friendly but technically accurate.
+- Explain concepts instead of only listing commands.
+- Preserve the actual architecture, names, ports, service names, database names, and technologies used in the project.
+- Use code blocks for commands/configuration.
+- Use tables where they improve readability.
+- Use Mermaid diagrams instead of unnecessary ASCII diagrams.
+- Add diagrams wherever a flow or relationship is difficult to understand from text alone.
+- Make every internal README link work correctly.
+- Keep naming and terminology consistent across all files.
+- Include a table of contents in the main README and, where useful, in longer lesson READMEs.
+- Do not duplicate large sections unnecessarily; link to the detailed lesson instead.
+- Clearly distinguish development/local configuration from Kubernetes configuration.
+- Document both Docker Compose and Kubernetes approaches.
+- Include a final end-to-end architecture diagram showing:
+  Frontend → Task/User Services → Feign → User Service → PostgreSQL
+  and the corresponding Docker/Kubernetes infrastructure.
+
+REVISION SECTION:
+At the end of the main README, create a "Quick Revision" section covering:
+- Microservices
+- REST vs Feign
+- JWT/Spring Security
+- Docker
+- Docker Compose
+- Kubernetes
+- Pods
+- Deployments
+- ReplicaSets
+- Services
+- Kubernetes DNS
+- PV/PVC
+- StatefulSets
+- ConfigMaps
+- Secrets
+- Resource requests/limits
+- Rolling updates
+- Health probes
+- Minikube
+- Service-to-service communication
+
+Also create a "Interview Preparation" section with common questions and concise answers related to this project.
+
+IMPORTANT:
+Base the documentation on the actual source code, configuration files, Docker files, Docker Compose files, Kubernetes manifests, APIs, and implemented features in the repository. Do not invent functionality that is not present.
+
+The goal is to make the repository README feel like a complete learning journal + project documentation + deployment guide + revision guide that I can use later to revise everything I learned and explain the project in interviews.
