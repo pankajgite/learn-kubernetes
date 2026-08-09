@@ -23,8 +23,8 @@ graph TD
     end
 
     subgraph "Kubernetes Cluster"
-        IC[Ingress Controller (e.g., NGINX)]
-        I[Ingress Object (Rules)]
+        IC["Ingress Controller (e.g., NGINX)"]
+        I["Ingress Object (Rules)"]
         USVC[User Service]
         TSVC[Task Service]
     end
